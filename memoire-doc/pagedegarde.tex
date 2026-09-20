@@ -1,0 +1,204 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Page de garde (Pagedegarde.tex)   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dorian Depriester, 2014
+\usepackage{fancyhdr}
+\usepackage{nomencl}
+\makeatletter
+\def\@ecole{School}
+\newcommand{\ecole}[1]{
+  \def\@ecole{#1}
+}
+
+\def\@entreprise{Company name}
+\newcommand{\entreprise}[1]{
+  \def\@entreprise{#1}
+}
+
+\def\@datedebut{\today}
+\newcommand{\datedebut}[1]{
+  \def\@datedebut{#1}
+}
+
+
+\def\@datefin{\today}
+\newcommand{\datefin}[1]{
+  \def\@datefin{#1}
+}
+
+
+
+\def\@specialite{Specialization}
+\newcommand{\specialite}[1]{
+  \def\@specialite{#1}
+}
+
+\def\@ED{Graduate school}
+\newcommand{\ED}[1]{
+  \def\@ED{#1}
+}
+
+\def\@doctorat{Doctorat}
+\newcommand{\doctorat}[1]{
+  \def\@doctorat{#1}
+}
+
+\def\@adresse{Address}
+\newcommand{\adresse}[1]{
+  \def\@adresse{#1}
+}
+
+\def\@directeur{Supervisor}
+\newcommand{\directeur}[1]{
+  \def\@directeur{#1}
+}
+
+\def\@fonction{Role}
+\newcommand{\fonction}[1]{
+  \def\@fonction{#1}
+}
+
+\def\@encadrant{Mentor}
+\newcommand{\encadrant}[1]{
+  \def\@encadrant{#1}
+}
+\def\@jurya{}{}{}
+\newcommand{\jurya}[3]{
+  \def\@jurya{#1,	& #2	& #3\\}
+}
+\def\@juryb{}{}{}
+\newcommand{\juryb}[3]{
+  \def\@juryb{#1,	& #2	& #3\\}
+}
+\def\@juryc{}{}{}
+\newcommand{\juryc}[3]{
+  \def\@juryc{#1,	& #2	& #3\\}
+}
+\def\@juryd{}{}{}
+\newcommand{\juryd}[3]{
+  \def\@juryd{#1,	& #2	& #3\\}
+}
+\def\@jurye{}{}{}
+\newcommand{\jurye}[3]{
+  \def\@jurye{#1,	& #2	& #3\\}
+}
+\def\@juryf{}{}{}
+\newcommand{\juryf}[3]{
+  \def\@juryf{#1,	& #2	& #3\\}
+}
+\def\@juryg{}{}{}
+\newcommand{\juryg}[3]{
+  \def\@juryg{#1,	& #2	& #3\\}
+}
+\def\@juryh{}{}{}
+\newcommand{\juryh}[3]{
+  \def\@juryh{#1,	& #2	& #3\\}
+}
+\def\@juryi{}{}{}
+\newcommand{\juryi}[3]{
+  \def\@juryi{#1,	& #2	& #3\\}
+}
+\makeatother
+
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\includegraphics[height=0.45\paperheight]{Bordure.png}%
+			\vfill
+		}
+	}
+}
+\newcommand\EtiquetteThese{%
+	\put(0,0){%
+		\parbox[t][\paperheight]{\paperwidth}{%
+			\hfill
+			%\colorbox{blue}{		
+				\begin{minipage}[b]{2em}
+					\includegraphics[width=4.0\textwidth]{logo_miage.png}\\					
+					%\centering\Huge\textcolor{white}{M\\I\\A\\G\\E\\}
+					\vspace{0.2cm}
+				\end{minipage}
+			%}
+		}
+	}
+}
+
+\makeatletter
+\newcommand{\pagedegarde}{
+\newgeometry{top=2.5cm, bottom=1cm, left=2cm, right=1cm}
+\AddToShipoutPicture*{\BackgroundPic}
+%\AddToShipoutPicture*{\EtiquetteThese}
+  \begin{titlepage}
+  \centering
+      \includegraphics[width=0.6\textwidth]{logo_Paris_Nanterre_couleur_RVB.png}
+      \hfill
+      \includegraphics[width=0.20\textwidth]{logo_entreprise.png}\\
+    \vspace{1cm}
+     % {\Large Licence MIASHS parcours MIAGE}\\
+    \vspace{1cm}
+      {\huge 
+      	{\bfseries M1 thesis}\\
+    \vspace{0.5cm}}
+      	Master MIAGE (apprenticeship)\\
+    \vspace{1cm}
+   		
+    \vspace{1cm}
+    	{\huge\color[rgb]{0,0,1} \bfseries{\@title}}\\
+    \vspace{0.5cm}
+    {\bfseries Host organization: \@entreprise}\\
+    {\bfseries Thesis period: \@datedebut\ -- \@datefin}\\
+    %	{\Large{\bfseries Spécialité doctorale ``\@specialite''}}\\
+    \vspace{2cm}
+    	\textit{Presented and defended by}\\
+    \vspace{0.5cm}
+    	{\Large {\bfseries \@author}} \\
+    \vspace{0.5cm}
+    	\@date \\
+    \vfill
+     %  {\LARGE \color[rgb]{0,0,1} \bfseries{\@title}} \\
+    %\vfill
+      %  Directeur de thèse : {\bfseries \@directeur}\\
+       % Co-encadrant de thèse : {\bfseries \@encadrant}\\
+    %\vfill
+	\begin{tabular}{>{\bfseries}lll}
+		\large Defense committee\\
+		\vspace{0.15cm}\\
+		\@jurya
+		\@juryb
+		\@juryc
+		%\@juryd
+		%\@jurye
+		%\@juryf
+		%\@juryg
+		%\@juryh
+		%\@juryi
+	\end{tabular}
+	%\includegraphics[width=0.20\textwidth]{logo_entreprise.png}\
+	\vfill
+	
+	%\@adresse
+  \end{titlepage}
+
+
+
+
+\restoregeometry  
+\makenomenclature
+
+\pagestyle{fancy}
+
+\renewcommand\headrulewidth{1pt}
+
+\fancyhead[L]{\@fonction}
+
+\fancyhead[R]{\@entreprise}
+
+
+\renewcommand\footrulewidth{1pt}
+
+\fancyfoot[L]{\@author}
+
+\fancyfoot[C]{}
+
+\fancyfoot[R]{Page \thepage/\pageref{LastPage}}
+}

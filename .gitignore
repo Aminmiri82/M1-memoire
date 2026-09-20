@@ -1,0 +1,98 @@
+# LaTeX auxiliary and build outputs (applies to all subdirectories)
+
+# macOS
+.DS_Store
+
+# Core LaTeX / pdfLaTeX / LuaLaTeX / XeLaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.lb
+
+# Intermediate / DVI
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool (latexmk)
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex(busy)
+
+# Beamer
+*.nav
+*.snm
+*.vrb
+
+# makeindex / splitindex / nomencl
+*.idx
+*.ilg
+*.ind
+*.ist
+*.nlo
+*.nls
+
+# glossaries / acronyms
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# hyperref / bookmark
+*.brf
+
+# listings
+*.lol
+
+# minted
+_minted*
+*.pyg
+
+# pythontex
+*.pytxcode
+pythontex-files-*
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# Tikz externalization
+*.md5
+*.auxlock
+
+# asymptote
+*.pre
+
+# WinEdt / TeXnicCenter backup
+*.bak
+*~
+
+# latexindent
+*.bak[0-9]*
+
+# generated if using -output-directory (common folder names)
+build/
+out/

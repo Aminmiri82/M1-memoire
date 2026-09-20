@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this thesis, please cite it."
+type: other
+title: "A Systematic Mapping Study of Learned Indexes in Database Systems"
+authors:
+  - family-names: Miri
+    given-names: Seyed Amineddin
+date-released: 2026-06-16
+repository-code: "https://github.com/Aminmiri82/M1-memoire"
+license: CC-BY-4.0
